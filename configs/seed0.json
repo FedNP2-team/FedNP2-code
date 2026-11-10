@@ -1,0 +1,16 @@
+{
+  "seed": 0,
+  "model": "fednearpu_v2",
+  "v2_experiment_mode": "nnpu_combined",
+  "parti_num": 50,
+  "online_ratio": 1.0,
+  "communication_epoch": 50,
+  "fednearpu_warmup_rounds": 20,
+  "fednearpu_local_epochs": 5,
+  "pseudo_refresh_gap": 10,
+  "fednearpu_top_m": 10,
+  "teacher_tau": 0.1,
+  "v2_distill_lambda": 0.2,
+  "v2_distill_ramp_rounds": 5,
+  "label_freq": 0.2
+}

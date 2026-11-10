@@ -31,7 +31,8 @@ def corrected_nnpu(logits_p, logits_d, prior, beta=0.0, gamma=1.0):
         loss = optimize
     parts = {
         "r_p_pos": float(pp.detach()), "r_p_neg": float(pn.detach()),
-        "r_d_neg": float(dn.detach()), "pu_r_positive": float(positive.detach()),
+        "r_d_neg": float(dn.detach()), "r_n_raw": float(negative.detach()),
+        "pu_r_positive": float(positive.detach()),
         "pu_r_negative_raw": float(negative.detach()),
         "pu_r_negative": float(negative.detach().clamp_min(0)),
         "pu_correction_active": int(corrected),

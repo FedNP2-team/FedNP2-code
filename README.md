@@ -1,9 +1,24 @@
 # FedNP²
 
-Federated positive–unlabeled learning with neighborhood-aware personalized supervision.
+Core implementation for federated positive–unlabeled learning using neighborhood-aware personalized supervision.
 
-The method selects relevant neighboring models using shared probes, combines their predictions using local PU risk, and periodically refreshes cached supervision during local training.
+## Contents
 
-## Repository status
+The release includes rotating shared probes, neighbor discovery, PU-risk-weighted teacher combination, cached supervision, nnPU optimization, FedAvg, the PU data protocol, and the ResNet model. The method code is based on the seed 0 `nnpu_combined` server implementation. When teacher scoring falls back, this mode can use the previous global model as a teacher and reduce the distillation weight.
 
-The reference implementation and example configuration are being prepared.
+`configs/seed0.json` records the shared settings of the seed 0 runs. It is a configuration reference, not a training command. Dataset-specific probe sizes and partitions are supplied by the caller.
+
+## Minimal example
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+python -m pip install -e .
+PYTHONPATH=. python examples/minimal_fednp2.py
+```
+
+The example uses synthetic data to demonstrate probe rotation, teacher weighting, and a local loss. It does not execute a full federated training run or reproduce paper metrics. Integrating the core into a training loop requires datasets, client partitioning, loaders, and evaluation.
+
+## Scope
+
+This review-stage snapshot includes the method core. It does not include datasets, trained checkpoints, experiment logs, baselines, or scripts for running the complete experiment matrix. No reuse license is specified in this snapshot.
