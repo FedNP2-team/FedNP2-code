@@ -17,8 +17,8 @@ python -m pip install -e .
 PYTHONPATH=. python examples/minimal_fednp2.py
 ```
 
-The example uses synthetic data to demonstrate probe rotation, teacher weighting, and a local loss. It does not execute a full federated training run or reproduce paper metrics. Integrating the core into a training loop requires datasets, client partitioning, loaders, and evaluation.
+The example uses synthetic data to demonstrate probe rotation, teacher weighting, and a local loss. Integrating the core into a training loop requires datasets, client partitioning, loaders, and evaluation.
 
 ## Scope
 
-This review-stage snapshot includes the method core. It does not include datasets, trained checkpoints, experiment logs, baselines, or scripts for running the complete experiment matrix. No reuse license is specified in this snapshot.
+This review-stage snapshot includes the method core. It does not include dtrained checkpoints, experiment logs, or scripts for running the complete experiment matrix. 
