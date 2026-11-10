@@ -4,9 +4,9 @@ Core implementation for federated positive–unlabeled learning using neighborho
 
 ## Contents
 
-The release includes rotating shared probes, neighbor discovery, PU-risk-weighted teacher combination, cached supervision, nnPU optimization, FedAvg, the PU data protocol, and the ResNet model. The method code is based on the seed 0 `nnpu_combined` server implementation. When teacher scoring falls back, this mode can use the previous global model as a teacher and reduce the distillation weight.
+The release includes rotating shared probes, neighbor discovery, PU-risk-weighted teacher combination, cached supervision, nnPU optimization, FedAvg, the PU data protocol, and the ResNet model. The method code is based on the seed 0 `nnpu_combined` server implementation. 
 
-`configs/seed0.json` records the shared settings of the seed 0 runs. It is a configuration reference, not a training command. Dataset-specific probe sizes and partitions are supplied by the caller.
+`configs/seed0.json` records the shared settings of the seed 0 runs. It is a configuration reference. Dataset-specific probe sizes and partitions are supplied by the caller.
 
 ## Minimal example
 
